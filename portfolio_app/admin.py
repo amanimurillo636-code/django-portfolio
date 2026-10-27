@@ -5,4 +5,4 @@ admin.site.register(Student)
 
 class Portfolio(models.Model):
     student = models.OneToOneField(Student, on_delete=models.CASCADE)
-    title 
+    title
