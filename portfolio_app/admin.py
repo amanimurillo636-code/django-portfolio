@@ -6,10 +6,6 @@ admin.site.register(Student)
 admin.site.register(Portfolio)
 
 class Portfolio(models.Model):
-<<<<<<< HEAD
-    student = models.OneToOneField(Student, on_delete=models.CASCADE)
-    title
-=======
     student = models.OneToOneField( Student, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     contact_email = models.EmailField()
@@ -18,4 +14,3 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return self.title
->>>>>>> views_template_sprint2
