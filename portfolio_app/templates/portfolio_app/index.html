@@ -6,6 +6,7 @@
 
 <ul>
     {% for portfolio in active_portfolios %}
+   <!-- Displays the value of a template variable --> 
         <li>{{ portfolio.title }}</li>
     {% empty %}
         <li>No active portfolios found.</li>
