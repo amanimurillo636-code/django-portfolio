@@ -2,10 +2,14 @@
 
 {% block content %}
 
-<h2>Welcome to Our Portfolio Application</h2>
+<h2>Active Student Portfolios</h2>
 
-<p>
-    Explore student portfolios and projects.
-</p>
+<ul>
+    {% for portfolio in active_portfolios %}
+        <li>{{ portfolio.title }}</li>
+    {% empty %}
+        <li>No active portfolios found.</li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
