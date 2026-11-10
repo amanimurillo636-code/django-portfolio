@@ -11,8 +11,11 @@ def index(request):
     )
 
     return render(
+        # HTTP request
         request,
+        #Template Django is rendering
         'portfolio_app/index.html',
+        #Context dictionary
         {'active_portfolios': active_portfolios}
     )
 
