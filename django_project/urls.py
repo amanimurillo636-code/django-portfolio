@@ -29,8 +29,17 @@ urlpatterns = [
     path('', include('portfolio_app.urls')),
 ]
 
+# path must be defined in views
+# List = all
+path('students/', views.StudentListView.as_view(), name='student-list'),
 
 
+# Detail = specific
+class StudentDetailView(DetailView):
+    model = Student
+    template_name = 'portfolio_app/student_detail.html'
+    context_object_name = 'student'
 
+path( 'students/<int:pk>/', views.StudentDetailView.as_view(), name='student-detail'),
 
 
